@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f67f838-89b8-4614-aa72-901157a418f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     billing_details.`PartName` AS billing_details_PartName,
+     billing_details.`Quantity` AS billing_details_Quantity,
+     billing_details.`QtPrice` AS billing_details_QtPrice,
+     billing_details.`Total` AS billing_details_Total
+FROM
+     `billing_details` billing_details]]>
+	</queryString>
+	<field name="billing_details_PartName" class="java.lang.String"/>
+	<field name="billing_details_Quantity" class="java.lang.Float"/>
+	<field name="billing_details_QtPrice" class="java.lang.Float"/>
+	<field name="billing_details_Total" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="397" height="79" uuid="b5b9e93d-c27c-4e0a-b3c4-7f85a999b56a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36"/>
+				</textElement>
+				<text><![CDATA[Gamage Service Center]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="126" height="20" uuid="76de59b1-6b00-4dd3-9624-4bd8f8c18b21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Part Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="0" width="126" height="20" uuid="1398ca53-1436-473d-8368-38b9771cee7d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Quantity ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="0" width="126" height="20" uuid="d2fdb111-b3e0-420a-9725-4ff2e1d08ee5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Qt Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="126" height="20" uuid="b3c5b7d3-c9bb-4401-83d1-d68f0c8e73ba"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="be6b27d3-308f-4ec5-b573-15e30d425233"/>
+				<textFieldExpression><![CDATA[$F{billing_details_PartName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="0" width="100" height="20" uuid="0698d057-9b95-42fe-a276-0f60216ccb79"/>
+				<textFieldExpression><![CDATA[$F{billing_details_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="0" width="100" height="20" uuid="954b6b31-dbf9-468f-94f3-e014cbbc1015"/>
+				<textFieldExpression><![CDATA[$F{billing_details_QtPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="100" height="20" uuid="f83f2b5d-7019-4782-8b74-605a7e951523"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
