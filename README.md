@@ -1,14 +1,4 @@
 # Service-Station-Management-System
-Ebuy-Network
-Simple Online Buying and Selling Network built using ASP .NET MVC
+Standalone application using Java to manage a service station.
 
-Prerequsites
-Visual Studio
-MSSQL Server
-IIS Server with ASP.NET
-SQL Server Management Studio
-Installation Guide
-Download the project zip folder or clone the repository into your computer.
-Create new Database 'ebuynetwork' in MSSQL Server .
-Download the Database Backup and import via SQL Server Management Studio
-Run the project via Visual Studio
+
